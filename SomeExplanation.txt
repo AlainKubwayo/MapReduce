@@ -1,0 +1,6 @@
+High Level Explanation of Top K Words Algorithm (K=10): 
+
+1. Various MapReduce steps are needed.
+2. Map: <docid, {list of words}> -> {list of <word, 1>}
+3. Reduce: <word, {list of counts}> -> <_,(word, sum(counts))>
+4. Reduce: <_,{list of (word, count) pairs}> -> <_,{list of words with k most frequent counts}>	
